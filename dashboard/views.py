@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-# Import your new Document Model and Form
 from .models import Document
 from .forms import DocumentForm
-from .utils import extract_text_from_pdf, ask_ai_about_pdf
+from .utils import ask_ai_about_pdf
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Document, APIUsage
 from datetime import date
@@ -64,7 +63,7 @@ def chat_with_pdf(request, doc_id):
         usage.save()
         
     # Calculate how many free questions they have left
-    DAILY_LIMIT = 5
+    DAILY_LIMIT = 20
     queries_left = DAILY_LIMIT - usage.queries_today
 
     if request.method == "POST":
@@ -74,8 +73,8 @@ def chat_with_pdf(request, doc_id):
         else:
             user_question = request.POST.get('question')
             pdf_path = document.uploaded_file.path
-            pdf_text = extract_text_from_pdf(pdf_path)  
-            answer = ask_ai_about_pdf(pdf_text, user_question)
+            
+            answer = ask_ai_about_pdf(pdf_path, user_question)
             
             # 4. Success! Deduct a credit and save to database
             usage.queries_today += 1

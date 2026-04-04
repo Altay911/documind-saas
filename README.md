@@ -4,17 +4,18 @@ DocuMind is an AI-powered SaaS platform that allows users to securely upload PDF
 
 ## ✨ Key Features
 
+* **True RAG Architecture (Retrieval-Augmented Generation):** Replaces basic context-stuffing with a highly efficient LangChain and Chroma Vector Database pipeline. The system chunks massive PDFs, embeds them mathematically, and only retrieves highly relevant paragraphs to drastically reduce API costs and improve AI accuracy.
 * **Secure Authentication:** Full login/registration system with password visibility toggles and secure session management.
-* **Smart Document Vault:** Users can upload, view, rename, and safely delete PDFs. (Includes a 5MB file size bouncer).
-* **AI Chat Interface:** Extracts text from PDFs using `PyPDF2` and feeds it to OpenAI for contextual, document-specific Q&A.
+* **Smart Document Vault:** Users can upload, view, rename, and safely delete PDFs. (Includes a custom file size bouncer).
 * **Freemium Business Model:** Custom database tracking limits users to 5 free questions per day to prevent API abuse.
-* **Modern UI/UX:** Built with Bootstrap 5 (Litera theme) featuring a fully functional Light/Dark Mode toggle that saves to local storage.
+* **Modern UI/UX:** Built with Bootstrap 5 featuring dynamic empty states, responsive grids, and error handling.
 * **Production Security:** Hidden `.env` architecture to protect Django secret keys and OpenAI API credentials.
 
 ## 🛠️ Tech Stack
 
 * **Backend:** Python, Django, SQLite
-* **AI & Processing:** OpenAI API (gpt-3.5-turbo), PyPDF2
+* **AI Architecture:** LangChain, ChromaDB (Vector Store), PyPDF
+* **LLM & Embeddings:** OpenAI API (gpt-3.5-turbo & text-embedding-ada-002)
 * **Frontend:** HTML5, CSS3, Vanilla JavaScript, Bootstrap 5, Bootstrap Icons
 * **Security:** python-dotenv
 

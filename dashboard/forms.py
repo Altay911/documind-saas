@@ -11,7 +11,7 @@ class DocumentForm(forms.ModelForm):
     def clean_uploaded_file(self):
         file = self.cleaned_data.get('uploaded_file')
 
-        if file.size > 5 * 1024 * 1024:
-            raise ValidationError("This PDF is too large! Maximum allowed size is 5MB.")
+        if file.size > 35 * 1024 * 1024:
+            raise ValidationError("This PDF is too large! Maximum allowed size is 35MB.")
             
         return file
