@@ -1,6 +1,6 @@
 # 🧠 DocuMind: Enterprise-Grade AI PDF SaaS
 
-**[🚀 View Live Production Demo](http://44.200.194.133)**
+**[🚀 View Live Production Demo](http://44.200.194.133/register/)**
 
 DocuMind is a full-stack AI platform that transforms static PDFs into interactive conversation partners. By leveraging **Retrieval-Augmented Generation (RAG)**, the system allows users to "chat" with massive documents in real-time while maintaining 100% data context and minimizing LLM costs.
 
