@@ -13,7 +13,7 @@
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="#">DocuMind SaaS</a>
             <div class="d-flex align-items-center">
-                <span class="me-3 text-muted">HELLO MY MAN, {{ user.username }}</span>
+                <span class="me-3 text-muted">HEY HEY brooo HEY, {{ user.username }}</span>
                 <form action="{% url 'logout' %}" method="post" class="d-inline">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-outline-danger btn-sm rounded-pill">Log Out</button>
