@@ -4,7 +4,7 @@ DocuMind is an AI-powered SaaS platform that allows users to securely upload PDF
 
 ## ✨ Key Features
 
-* **True RAG Architecture (Retrieval-Augmented Generation):** Replaces basic context-stuffing with a highly efficient LangChain and Chroma Vector Database pipeline. The system chunks massive PDFs, embeds them mathematically, and only retrieves highly relevant paragraphs to drastically reduce API costs and improve AI accuracy.
+* **True RAG Architecture (Retrieval-Augmented Generation):** Replaces basic context-stuffing with a highly efficient LangChain and FAISS Vector Database pipeline. The system chunks massive PDFs, embeds them mathematically, and only retrieves highly relevant paragraphs to drastically reduce API costs and improve AI accuracy.
 * **Secure Authentication:** Full login/registration system with password visibility toggles and secure session management.
 * **Smart Document Vault:** Users can upload, view, rename, and safely delete PDFs. (Includes a custom file size bouncer).
 * **Freemium Business Model:** Custom database tracking limits users to 5 free questions per day to prevent API abuse.
@@ -14,7 +14,7 @@ DocuMind is an AI-powered SaaS platform that allows users to securely upload PDF
 ## 🛠️ Tech Stack
 
 * **Backend:** Python, Django, SQLite
-* **AI Architecture:** LangChain, ChromaDB (Vector Store), PyPDF
+* **AI Architecture:** LangChain, FAISS (Vector Store), PyPDF
 * **LLM & Embeddings:** OpenAI API (gpt-3.5-turbo & text-embedding-ada-002)
 * **Frontend:** HTML5, CSS3, Vanilla JavaScript, Bootstrap 5, Bootstrap Icons
 * **Security:** python-dotenv
