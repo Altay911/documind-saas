@@ -84,8 +84,3 @@ DocuMind is evolving from a technical demo into a production-ready SaaS. The fol
 📊 Usage Analytics Dashboard: A private admin view to track API costs, popular query topics, and user growth.
 
 🔒 Enhanced Privacy: Adding "Self-Destruct" modes for sensitive documents where data is wiped from the Vector DB immediately after the session ends.
-
-
-
-
-ALTAY
